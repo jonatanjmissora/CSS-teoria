@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS Teoria</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>CSS Teoria</h1>
+      <div class="main-container">
+        <div class="nav-box">
+          <label class="lb-ayuda" for="ayuda">paginas web</label>
+          <label class="lb-estructura" for="estructura">estructura</label>
+          <label class="lb-box-model" for="box-model">box model</label>
+          <label class="lb-selectores" for="selectores">selectores</label>
+          <label class="lb-specificity" for="specificity">specificity</label>
+          <label class="lb-display" for="display">display</label>
+          <label class="lb-position" for="position">position</label>
+          <label class="lb-centrado" for="centrado">centrado</label>
+          <label class="lb-letras" for="letras">letras y texto</label>
+          <label class="lb-unidades" for="unidades">unidades</label>
+          <label class="lb-background" for="background">background</label>
+          <label class="lb-listas" for="listas">listas</label>
+          <label class="lb-transform" for="transform">transf y animation</label>
+          <label class="lb-border" for="border">border y shadow</label>
+          <label class="lb-filters" for="filters">filters</label>
+          <label class="lb-varios" for="varios">varios</label>
+        </div>
+        <article class="content">
+          <!--  paginas web -->
+          <input type="radio" name="rad" id="ayuda" checked />
+          <section class="ayuda">
+            <h2 id="ayuda">Paginas Web</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    clip-path
+    
+    fonts
+    
+    fotos
+    
+    
+    
+    iconos</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    https://bennettfeely.com/clippy/
+              
+    https://fonts.google.com/
+              
+    url(//unsplash.it/400/100)
+    https://picsum.photos/600
+    https://www.pexels.com/es-es/
+              
+    https://cdn.jsdelivr.net/npm/boxicons@2.0.5/
+    css/boxicons.min.css
+       <span><</span>i class='bx bxs-diamond'<span>></span><span><</span>/i<span>></span><br><br>
+    https://cdnjs.cloudflare.com/ajax/libs/
+    font-awesome/5.14.0/css/all.min.css
+              <span><</span>i class='fas fa-address-card'<span>></span><span><</span>/i<span>></span>
+              
+      .icono {   
+        font-family: 'Font Awesome 5 Free';
+        content: ' \f2bb';
+        font-weight: 400;
+        display: inline-block;
+      }</pre>
+              </div>
+            </div>
+          </section>
+          <!--  estructura -->
+          <input type="radio" name="rad" id="estructura" />
+          <section class="estructura">
+            <h2 id="estructura">Estructura</h2>
+            <div class="box">
+              <div class="code">
+                <pre>
+    - Font Imports
+    - Variables
+    
+    * {  margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    ...
+    body, footer, h1, etc {
+    
+    .contenedor {
+    #itemUno {</pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  box model -->
+          <input type="radio" name="rad" id="box-model" />
+          <section class="box-model">
+            <h2 id="box-mod">Box Model</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    margenes, es la separacion del elemento con su entorno
+    sentido horario: top, left, bottom, right
+    podemos definir el espacio individualmente
+    auto centra el elemento horaizontalmente
+    empuja el elemento y los que le siguen hacia la izquierda
+    idem anterior
+              
+    margin colapsed: se superponen, imponiendose el mayor
+    cuando hay 2 elementos con margenes contiguos
+              
+    separacion interna del contenido con su borde
+    podemos definir la separacion individualmente
+              
+    incluye el padding y el border en el calculo de dimensiones
+              
+    permite achicar, y nunca mas grande que 500px
+    permite agrandar, y nunca mas chico que 500px</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    margin: 1rem;
+    margin: 0 1rem 2rem 0;
+    margin-top-right-bottom-left;
+    margin: auto;
+    margin-left: auto;
+    margin: 0 auto 0 0;
+    
+    
+    
+    
+    padding: 10px;
+    padding-top-right-bottom-left
+    
+    box-sizing: border-box;
+    
+    max-width: 500px;
+    min-width: 500px;</pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  selectores -->
+          <input type="radio" name="rad" id="selectores" />
+          <section class="selectores">
+            <h2 id="selectores">Selectores</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    universal
+    .uno y .dos a la vez
+    .uno o .dos
+    p hijo y sub de .uno
+    p hijo directo de .uno
+              
+    unico p, si tiene .uno delante
+    unico .box, si tiene un .box delante
+              
+    todos los hermanos p que siguen de .uno
+    todos los hermanos .box que siguen de .box
+              
+    tab, elemeto en foco
+    radio o combo seleccionados
+    atributos de un elemento
+    los que no sean .uno
+    pseudo-elementos
+    primer hijo
+    el primer hijo de su clase
+    el ultimo hijo
+    el ultimo hijo de su clase
+    el 3er hijo
+    los hijos pares
+    el unico hijo
+    el unico hijo de su clase
+              
+    tengan 'target' como atributo
+    atributo 'target' con valor 'about.html'
+    empiece con 'link', si 'link-2', no 'link 2'
+    empiece con 'http', si 'httper', si 'http 2'
+    contenga 'il', si 'le il', no 'le-il', no 'iles'
+    contenga 'il' en cualquier lugar, si 'sile'
+    termine con 'il', si 'reptil'</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    *
+    .uno.dos 
+    .uno, .dos 
+    .uno p 
+    .uno > p 
+    
+    .uno + p
+    .box + .box
+    
+    .uno ~ p
+    .box ~ .box
+    
+    :focus
+    :checked
+    :required/ :disable
+    :not(.uno)
+    ::before / ::after
+    :first-child
+    :first-of-type
+    :last-child
+    :last-of-type
+    :nth-child(3)
+    :nth-child(2n)
+    :only-child
+    :only-of-type
+    
+    a[target]
+    a[href="about.html"]
+    a[class|="link"]
+    a[href∧="http"]
+    a[href~="il"]
+    a[href*="il"]
+    a[href$="il"]</pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  specificity -->
+          <input type="radio" name="rad" id="specificity" />
+          <section class="specificity">
+            <h2 id="specificity">Specificity</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    determina que estilo tiene prioridad sobre otro que
+    hace referencia al mismo elemento
+    <u>orden jerarquico:</u>
+    - !important tiene la mayor prioridad
+    - el estilo inline en el html vale 1000
+    - el id vale 100
+    - la clase y pseudo clases valen 10
+    - los elementos genericos valen 1
+    </pre>
+              </div>
+            </div>
+          </section>
+          <!--  display -->
+          <input type="radio" name="rad" id="display" />
+          <section class="display">
+            <h2 id="display">Display</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    comienza una linea nueva y ocupa todo el ancho
+    permite height y padding (h1, p)
+    no hace salto de linea y ocupa solo su contenido
+    no permite heigh ni padding(a, li, span)
+    elemento inline que permite height y padding
+    
+    para que un texto no ocupe 2 lineas
+    
+    el elemento flota hacia la izq y los demas
+    elementos se posicionan a su derecha, inline
+    evita que los elementos siguientes se coloquen
+    a derecha del elemento flotado
+    flex box, comporta como bloque
+    grid box, comporta como bloque
+    seria un block-inline, es decir permite height,
+    linea nueva, pero ocupa solo su contenido
+    
+    se comporta como flex o grid pero no ocupa
+    todo el ancho
+    
+    hace que no se muestre el elemento</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    display: block;
+    
+    display: inline;
+    
+    display: inline-block;
+    
+    white-space: nowrap;
+    
+    float: left;
+    
+    clear: both;
+    
+    display: flex;
+    display: grid;
+    display: table;
+    
+    
+    display: inline-flex;
+    display: inline-grid;
+    
+    display: none;</pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  position -->
+          <input type="radio" name="rad" id="position" />
+          <section class="position">
+            <h2 id="position">Position</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    default, la que asigna el html
+    
+    relativa a su posicion original. Su posicion se
+    reserva y no la ocupan los demas elementos
+    
+    relativa al primer padre que no tenga una estatica y
+    el lugar no se reserva y se ocupa por otros elementos
+    
+    fijo al viewport, por mas que haga scroll
+    
+    con scroll, cuando el elemento llegue a la posicion
+    fijada, quedara ahi mientras su padre este en pantalla
+    
+    indice en el eje z, permite poner elementos por 
+    sobre otros</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    position: static;
+    
+    position: relative;
+    
+    
+    position: absolute;
+    
+    
+    position: fixed;
+    
+    position: sticky;
+    
+    
+    z-index: 1;
+              </pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  columnas -->
+          <input type="radio" name="rad" id="columnas" />
+          <section class="columnas">
+            <h2 id="columnas">Columnas</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    si hay espacio, son 3 columnas de 200px c/u
+    si se achica el espacio de 600px, se forman
+    2 columnas, y si baja de 400px, solo 1 columna
+    
+    separador
+    separacion entre columnas
+    pones esto para el elemento que quieras
+    sacar de las columnas, como titulos
+    </pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    column-count: 3;
+    column-width: 200px;
+    column: 3 200px;
+    
+    column-rule: 2px solid red;
+    column-gap: 50px;
+    column-span: all;
+    
+    </pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  centrado -->
+          <input type="radio" name="rad" id="centrado" />
+          <section class="centrado">
+            <h2 id="centrado">Centrado</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    texto: line-height = height
+    
+    
+    
+    
+    elemento: mediante translate
+    
+    
+    
+    
+    contenedor: mediante flexbox
+    
+    
+    
+    en el contenedor
+    en el elemento</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    height: 460px;
+    ...
+    text-align: center;
+    line-height: 460px;
+    
+    position: relative
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    display: flex;
+    margin: auto;</pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  letras y texto -->
+          <input type="radio" name="rad" id="letras" />
+          <section class="letras">
+            <h2 id="letras">Letras y Texto</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    letra descargada de internet
+              
+              
+              
+              
+    google fonts en HTML
+              
+              
+    para CSS
+              
+              
+    tipo de letra
+    16px = 1rem   62.5% hace 1rem = 10px
+    en italica
+    en negrita si la letra lo permite
+    mayusculas en pequeño
+              
+    color de la letra
+              
+    saca el subrayado a las anclas
+    tacha las letras
+    le coloca subrayado
+    convierte a mayusculas
+              
+    pone sombra a las letras
+              
+    sangria al texto
+    separacion entre renglones
+    separacion entre caracteres
+    separacion entre palabras
+    alineamiento del texto
+    si hay un bloque, alinea verticalmente</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    @font-face {
+      font-family: myFirstFont;
+      src: url(file.tff);
+    }
+    
+    <span><</span>link href="https://fonts.googleapis.com/css2?family=<br>Kufam:ital,wght@1,600&display=swap" rel="stylesheet">
+    
+    @import url('https://fonts.googleapis.com/css2?family=<br>Kufam:ital,wght@1,600&display=swap');
+    
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 800/bold;
+    font-variant: small-caps;
+    
+    color: white;
+    
+    text-decoration: none;
+    text-decoration: line-through;
+    text-decoration: underline;
+    text-transform: uppercase;
+    
+    text-shadow: 2px 2px 5px red; 
+                 (horiz, vert, blur, color)
+    text-indent: 50px;
+    line-height: 1.6em;
+    letter-spacing: .5em;
+    word-spacing: 1em;
+    text-align: center/justify;
+    vertical-align: top/middle/bottom;</pre>
+              </div>
+            </div>
+          </section>
+          <!--  unidades -->
+          <input type="radio" name="rad" id="unidades" />
+          <section class="unidades">
+            <h2 id="unidades">Unidades</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    absoluto es una medida fija
+    
+    relativo a su contenedor, cuenta su margin y padding
+    
+    relativo al viewport, no cuenta su margin ni padding
+    
+    relativo al font-size del elemento, sino de su padre
+    2em = 2 veces el tamaño del font-size
+    
+    relativo al font-size del html
+    
+    si hacemos esto, el font-size = 20px</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    px
+    
+    %
+    
+    vw, vh
+    
+    em
+    
+    
+    rem
+    
+    htm {font-size: 62.5%;}
+    h1 {font-size: 2rem;}</pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  background -->
+          <input type="radio" name="rad" id="background" />
+          <section class="background">
+            <h2 id="imagen">Background</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    no se muestra lo que sobrepasa contenedor
+    si excede, aparece barra de scroll
+    
+    degradee de color a 45 grados
+    posicion de la imagen segun su contenedor
+    el archivo o la direccion web de la imagen
+    una imagen y un color a la vez, no mezclados
+    no repite si el contenedor es mas grande
+    el fondo queda fijo o no segun el scroll de pagina
+    redimensiona la foto hasta completar el contenedor
+    
+    permite que la imagen ocupe todo el contenedor</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    overflow: hidden;
+    overflow: auto;
+    
+    background: linear-gradient(45deg, cyan, red);
+    background-position: center center/right top;
+    background-image: url("../images/acero2.png");
+    background-color: red;
+    background-repeat: no-repeat/repeat-x;
+    background-attachment: fixed/scroll;
+    background-size: cover;
+    
+    width: 100%;</pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  listas -->
+          <input type="radio" name="rad" id="listas" />
+          <section class="listas">
+            <h2 id="listas">Listas</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    lista desordenada con burbujas
+    lista desordenada con cuadrados
+    pone una imagen o un icono
+    lista ordenada con romanos
+    lista ordenada con letras</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    list-style-type: circle;
+    list-style-type: square;
+    list-style-image: url('sqpurple.gif');
+    list-style-type: upper-roman;
+    list-style-type: lower-alpha;</pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  transform y animation -->
+          <input type="radio" name="rad" id="transform" />
+          <section class="transform">
+            <h2 id="transform">Transform y transition</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    <u>animation:</u>
+    
+    
+    
+    
+    
+    deja al elemento con el estilo
+    que tiene el 100% o el 0%
+    
+    <u>transition:</u>
+    
+    
+    
+    
+    250 es el delay
+    
+    <u>transform:</u></pre>
+              </div>
+              <div class="code">
+                <pre>
+    animation-name: myanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite/1/4;
+    animation-delay: 1s;
+    animation-direction: reverse/alternate/normal;
+    animation-timing-duration: linear/ease/etc;
+    animation-fill-mode: foward/backwards/none;
+    
+    
+    transition-duration: 1s;
+    transition-property: background/with/
+                         transform/all;
+    transition-timing-function: linear/ease-in/
+              ease-out/ease-in-out/cubic-bezier;
+    transition: 1s 250ms width linear;	
+    transition: 1s background linear,
+    .5s transform ease-out;
+    
+    transform: rotate(45deg)/scale(1.2)/
+            skew(-25deg)/translate(-50%, -50%);
+    </pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  border y shadow -->
+          <input type="radio" name="rad" id="border" />
+          <section class="border">
+            <h2 id="border">Border y shadow</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    dotted/dashed/double/ridge/outset
+    borde solo a derecha
+    bordes individuales al recuadro
+    nos hace un borde redondo
+            
+    borde pero no se toma en cuenta en el box model
+            
+    le da sombra roja definida al texto.
+    le da sombra difusa con blur, al texto.
+    le agrega un halo de color azul.
+            
+    le da un borde a la letra.
+            
+            
+            
+            
+    shadow al contenedor (X-offset/Y-offset)
+    idem pero le agregamos blur</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    border: 1px solid red;
+    border-right: 1px solid #333;
+    border-radius: 20px 20px 0 0;
+    border-radius: 50%;	
+    
+    outline: 3px solid red;
+    
+    text-shadow: 2px 2px red;
+    text-shadow: 2px 2px 4px black;	
+    text-shadow: 2px 2px 4px black, 	
+                   0 0 20px blue;
+    text-shadow: -1px 0 black,
+              0 1px black,
+              1px 0 black, 
+             0 -1px black;		
+        
+    box-shadow: 10px 10px gray;
+    box-shadow: 10px 10px 5px gray;</pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  filters -->
+          <input type="radio" name="rad" id="filters" />
+          <section class="filters">
+            <h2 id="filters">Filters</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>
+    borroso
+    brillo
+    contraste
+    sombreado
+    escala de gris
+    transparencia
+    sepia
+    sin filtro
+    
+    arregla la imagen</pre
+                >
+              </div>
+              <div class="code">
+                <pre>
+    filter: blur(5px);
+    filter: brightness(0.4);
+    filter: contrast(200%);
+    filter: drop-shadow(16px 16px 20px blue);
+    filter: grayscale(50%);
+    filter: opacity(25%);
+    filter: sepia(60%);
+    filter: none;
+    
+    filter: contrast(175%) brightness(3%);</pre
+                >
+              </div>
+            </div>
+          </section>
+          <!--  varios -->
+          <input type="radio" name="rad" id="varios" />
+          <section class="varios">
+            <h2 id="varios">Varios</h2>
+            <div class="box">
+              <div class="desc">
+                <pre>    como hacer un triangulo</pre>
+              </div>
+              <div class="code">
+                <pre>
+    .uno::before {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 0;
+         border: 1em solid transparent;
+         border-left-color: red; }
+    </pre
+                >
+              </div>
+            </div>
+          </section>
+          <div class="select"></div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
